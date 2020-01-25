@@ -1,0 +1,22 @@
+
+<div>
+    <h3>Add new media</h3>
+    <div class="row">
+      <div class="col"><label for="">Enter Title</label></div>
+      <div class="col"><input type="text" #txttitle /></div>
+    </div>
+    <div class="row">
+      <div class="col"><label for="">Enter Description</label></div>
+      <div class="col"><input type="text" #txtdes /></div>
+    </div><div class="row">
+      <div class="col"><label for="">Enter tag</label></div>
+      <div class="col"><input type="text" #txttag /></div>
+    </div>
+    <div class="row">
+  
+      <div class="col"><input type="button" value="Save" (click)="saveMedia(txttitle, txtdes, txttag)" /></div>
+    </div>
+  </hr>
+  <media-list [mediaList]="medias" > </media-list>
+  
+    </div>

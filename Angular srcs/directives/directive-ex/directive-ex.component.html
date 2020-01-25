@@ -1,0 +1,14 @@
+<div>
+    <div><h2>Name :{{name}}</h2></div>
+    <div><h2>Age :{{age}}</h2></div>
+    <div><h2>Email :{{email}}</h2></div>
+    
+    
+    <div *ngIf="age>=18">eligible to vote</div>
+    
+    <div>
+        <input type="button" value="change" (click)="changeval()" />
+
+    </div>
+</div>
+

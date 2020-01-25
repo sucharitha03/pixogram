@@ -1,0 +1,17 @@
+<div>
+    <label for="value1">enter number</label>
+      <input type="text" id="value1" #value1 />
+      <label for="value2">enter number</label>
+      <input type="text" id="value2" #value2 />
+</div>     
+
+<div>
+
+<input type="button" id="btn1" value="+" (click)="sum(value1,value2)" />
+<input type="button" id="btn2" value="-" (click)="sub(value1,value2)" />
+<input type="button" id="btn3" value="*" (click)="product(value1,value2)" />
+<input type="button" id="btn4" value="/" (click)="division(value1,value2)" />
+<input type="button" (click)="reset()">reset</input><br><br>
+ <label for="result">result</label>
+ <input type="text" id="result"  #result />
+</div>
