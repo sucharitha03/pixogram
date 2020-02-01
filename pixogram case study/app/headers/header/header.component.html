@@ -1,0 +1,39 @@
+<div class="row mt-4">
+    <div class="col-sm-3">
+        <div class="d-flex justify-content-start">
+            <img width="200px" style="border-radius: 10% " src="/assets/logo.png"   alt="logo">
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <nav>
+            <ul class="nav  nav-tab nav-justified">
+                <li *ngIf="auth.isUserLoggedIn()" class="nav-item">
+                    <a class="nav-link bg-primary  text-dark" [routerLink]="['/uploadmedia']">Upload-Media</a>
+                </li>
+                <li *ngIf="auth.isUserLoggedIn()" class="nav-item">
+                    <a class="nav-link bg-success text-dark" [routerLink]="['/mymedia']">MyMedia</a>       
+                </li>
+                <li *ngIf="auth.isUserLoggedIn()" class="nav-item">
+                    <a class="nav-link bg-warning text-dark" [routerLink]="['/followers']">Followers/Following</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link bg-danger text-dark" [routerLink]="['/login']">login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-info text-dark" [routerLink]="['/registration']">Register</a>
+                  </li>
+                  <li  *ngIf="auth.isUserLoggedIn()" class="nav-item">
+                    <a class="nav-link btn-success text-dark" [routerLink]="['/logout']">LOGOUT</a>
+                  </li>
+            </ul>
+        </nav>
+    </div>
+   
+    <div class="col-sm-3" >
+        <div class="d-flex justify-content-end">
+            <button [routerLink]="['/account']" style="background-color: cadetblue;" type="button" class="p-1 btn  w-50">Account</button>
+        </div>
+    </div>
+    
+</div>
